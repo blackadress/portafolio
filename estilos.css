@@ -1,0 +1,241 @@
+:root {
+    --primary-0: rgba(31, 28, 159, 1);
+    --primary-1: rgba(91, 89, 188, 1);
+    --primary-2: rgba(60, 58, 174, 1);
+    --primary-3: rgba(20, 18, 127, 1);
+    --primary-4: rgba(12, 11, 99, 1);
+
+    --secondary-1-0: rgba(5, 143, 124, 1);
+    --secondary-1-1: rgba(66, 172, 158, 1);
+    --secondary-1-2: rgba(34, 156, 139, 1);
+    --secondary-1-3: rgba(0, 114, 99, 1);
+    --secondary-1-4: rgba(0, 89, 77, 1);
+
+    --secondary-2-0: rgba(117, 11, 151, 1);
+    --secondary-2-1: rgba(154, 73, 180, 1);
+    --secondary-2-2: rgba(135, 40, 165, 1);
+    --secondary-2-3: rgba(93, 4, 121, 1);
+    --secondary-2-4: rgba(72, 2, 94, 1);
+
+    /*
+    si se quiere usar rgba con opacitys diferentes 
+        --color-1: 31, 28, 159
+    luego para llamarlo se hace
+        background-color: rgba(--color-1, 0.9) 
+    */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.inicial {
+    display: grid;
+    background-image: linear-gradient(to bottom right, var(--primary-0), var(--secondary-2-1));
+    grid-template-columns: 100%;
+    height: 100vh;
+}
+
+.inicial__presentacion {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.inicial h1,
+h2 {
+    justify-self: center;
+    color: #ffffee;
+    font-size: 2em;
+}
+
+.inicial__self-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inicial__self-link {
+    font-size: 1.5em;
+    margin: 20px 50px 20px 50px;
+    color: #ffffff;
+}
+
+.inicial__exterior {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inicial__exterior-link {
+    font-size: 1.2em;
+    margin: 20px 30px 20px 30px;
+    color: #ffedff;
+}
+
+.chevron {
+    border-style: solid;
+    border-width: 0.5em 0.5em 0 0;
+    border-radius: 15%;
+    border-color: #ffffff;
+    height: 1.0em;
+    position: relative;
+    transform: rotate(135deg);
+    vertical-align: top;
+    width: 1.0em;
+    align-self: center;
+    justify-self: center;
+}
+
+.chevron-abajo {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0) rotate(135deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0) rotate(135deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(135deg);
+    }
+}
+
+.scroll-down {
+    margin: -22px 0px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9em;
+    -webkit-animation: scrollP 1s infinite alternate;
+    animation: scrollP 1s infinite alternate;
+}
+
+@keyframes scrollP {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-10px)
+    }
+}
+
+@-webkit-keyframes scrollP {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-10px)
+    }
+}
+
+.habilidades {
+    background-color: rgba(255, 255, 255, 1);
+    height: 50vh;
+}
+
+.habilidades__tabs {
+    display: grid;
+    grid-template-areas:
+        "t-1 t-2 t-3"
+        "cont cont cont";
+    margin: 1rem;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .3);
+    border: 1px solid rgba(0, 0, 0, .3);
+    overflow: hidden;
+    list-style: none;
+}
+
+[for*='-1'] {
+    grid-area: t-1;
+}
+
+[for*='-2'] {
+    grid-area: t-2;
+}
+
+[for*='-3'] {
+    grid-area: t-3;
+}
+
+.habilidades__tab-switch:checked+label+article {
+    grid-area: cont;
+    z-index: 1;
+    background: #fff;
+    opacity: 1;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    animation: show 1s;
+}
+
+.habilidades__tab-content {
+    opacity: 0;
+    max-width: 0;
+    max-height: 0;
+    padding: 1.5rem;
+    margin-right: 1em;
+    text-align: justify;
+    text-overflow: clip;
+}
+
+.habilidades__tab-switch {
+    display: none;
+}
+
+.habilidades__tab-label {
+    cursor: pointer;
+    font-variant: small-caps;
+    font-size: 1.5rem;
+    line-height: 1;
+    text-align: center;
+    z-index: 1;
+    background: var(--primary-1);
+    overflow: auto;
+}
+
+.habilidades__tab-label:hover {
+    background: var(--secondary-1-0)
+}
+
+.habilidades__tab-switch:checked+label {
+    background: var(--secondary-1-0)
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.proyectos {
+    height: 50vh;
+    background-color: var(--secondary-1-1)
+}
+
+.contacto {
+    height: 50vh;
+    background-color: var(--secondary-1-0)
+}
