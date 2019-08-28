@@ -1,0 +1,94 @@
+:root {
+    --primary-0: rgba(31, 28, 159, 1);
+    --primary-1: rgba(91, 89, 188, 1);
+    --primary-2: rgba(60, 58, 174, 1);
+    --primary-3: rgba(20, 18, 127, 1);
+    --primary-4: rgba(12, 11, 99, 1);
+
+    --secondary-1-0: rgba(5, 143, 124, 1);
+    --secondary-1-1: rgba(66, 172, 158, 1);
+    --secondary-1-2: rgba(34, 156, 139, 1);
+    --secondary-1-3: rgba(0, 114, 99, 1);
+    --secondary-1-4: rgba(0, 89, 77, 1);
+
+    --secondary-2-0: rgba(117, 11, 151, 1);
+    --secondary-2-1: rgba(154, 73, 180, 1);
+    --secondary-2-2: rgba(135, 40, 165, 1);
+    --secondary-2-3: rgba(93, 4, 121, 1);
+    --secondary-2-4: rgba(72, 2, 94, 1);
+
+    /*
+    si se quiere usar rgba con opacitys diferentes 
+        --color-1: 31, 28, 159
+    luego para llamarlo se hace
+        background-color: rgba(--color-1, 0.9) 
+    */
+}
+
+.chevron {
+    border-style: solid;
+    border-width: 0.5em 0.5em 0 0;
+    border-radius: 15%;
+    border-color: #ffffff;
+    height: 1.0em;
+    position: relative;
+    transform: rotate(135deg);
+    vertical-align: top;
+    width: 1.0em;
+    align-self: center;
+    justify-self: center;
+}
+
+.chevron-abajo {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateY(0) rotate(135deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0) rotate(135deg);
+    }
+
+    100% {
+        transform: translateY(-10px) rotate(135deg);
+    }
+}
+
+.scroll-down {
+    margin: -22px 0px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9em;
+    -webkit-animation: scrollP 1s infinite alternate;
+    animation: scrollP 1s infinite alternate;
+}
+
+@keyframes scrollP {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-10px)
+    }
+}
+
+@-webkit-keyframes scrollP {
+    0% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-10px)
+    }
+}
