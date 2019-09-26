@@ -5,127 +5,170 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+  <link rel="stylesheet" href="estilos2.css">
   <title>Document</title>
 </head>
 
 <body>
 
-  <section id="inicial" class="container">
-    <h1>Erland Huamán Borda</h1>
-    <h2>Desarrollador de software</h2>
-    <ul class="">
+  <nav class="menu">
+    <ul class="lista-habilidades">
       <li><a href="#habilidades" class="">Habilidades</a></li>
       <li><a href="#proyectos" class="">Proyectos</a></li>
       <li><a href="#contacto" class="">Contacto</a></li>
     </ul>
-    <ul class="">
-      <li><a href="" class="">Linkedin</a></li>
-      <li><a href="" class="">Github</a></li>
-      <li><a href="" class="">Twitter</a></li>
+    <ul class="lista-redes">
+      <li><a href="" class=""><img src="assets/redes/linkedin.png" alt="Linkedin"></a></li>
+      <li><a href="" class=""><img src="assets/redes/github.png" alt="Github"></a></li>
+      <li><a href="" class=""><img src="assets/redes/youtube.png" alt="Youtube"></a></li>
+      <li><a href="" class=""><img src="assets/redes/twitter.png" alt="Twitter"></a></li>
     </ul>
-    <p class="">¡Hola! Soy un desarrollador de software, enfocado en la web. Experiencia tanto en
-      Backend, Frontend y Servidor</p>
-    <div class="chevron chevron-abajo"></div>
-    <p class="scroll-down">desplázate hacia abajo</p>
-  </section>
+  </nav>
 
-  <section id="habilidades" class="container">
-    <div class="row">
+  <main>
+    <section id="inicial" class="container-fluid">
+      <h1>Erland Huamán Borda</h1>
+      <h2>Desarrollador de software</h2>
+      <p class="descripcion">¡Hola! Soy un desarrollador de software, enfocado en la web. Experiencia tanto en
+        Backend, Frontend y Servidor</p>
+      <div class="chevron chevron-abajo"></div>
+      <p class="scroll-down">desplázate hacia abajo</p>
+    </section>
 
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="" alt="">
-            <span></span>
-          </div>
-          <div class="card-content">
-            <h4>Lenguajes</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptate repudiandae tempora rem,
-                quos saepe recusandae esse, ipsa illum voluptates eaque accusantium iusto qui ex sit placeat quas
-                aliquid nostrum.</p>
-          </div>
+    <section id="habilidades" class="container">
+      <div class="card">
+        <div class="card-image">
+          <img src="assets/body-icons/programar.png" alt="Lenguajes">
+          <span></span>
+        </div>
+        <div class="card-content">
+          <h4>Lenguajes</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptate repudiandae tempora rem,
+              quos saepe recusandae esse, ipsa illum voluptates eaque accusantium iusto qui ex sit placeat quas
+              aliquid nostrum.</p>
         </div>
       </div>
-
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="" alt="">
-            <span></span>
-          </div>
-          <div class="card-content">
-            <h4>Frameworks y librerías</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptate repudiandae tempora rem,
-                quos saepe recusandae esse, ipsa illum voluptates eaque accusantium iusto qui ex sit placeat quas
-                aliquid nostrum.</p>
-          </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="assets/body-icons/framework1.png" alt="Framework">
+          <span></span>
+        </div>
+        <div class="card-content">
+          <h4>Frameworks y librerías</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptate repudiandae tempora rem,
+              quos saepe recusandae esse, ipsa illum voluptates eaque accusantium iusto qui ex sit placeat quas
+              aliquid nostrum.</p>
         </div>
       </div>
-
-      <div class="col s12 m4">
-        <div class="card">
-          <div class="card-image">
-            <img src="" alt="">
-            <span></span>
-          </div>
-          <div class="card-content">
-            <h4>Gestión de software</h2>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptate repudiandae tempora rem,
-                quos saepe recusandae esse, ipsa illum voluptates eaque accusantium iusto qui ex sit placeat quas
-                aliquid nostrum.</p>
-          </div>
+      <div class="card">
+        <div class="card-image">
+          <img src="assets/body-icons/tools.png" alt="Herramientas">
+          <span></span>
+        </div>
+        <div class="card-content">
+          <h4>Gestión de software</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, voluptate repudiandae tempora rem,
+              quos saepe recusandae esse, ipsa illum voluptates eaque accusantium iusto qui ex sit placeat quas
+              aliquid nostrum.</p>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <section id="proyectos" class="container">
-    <div class="row">
-
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image">
-            <a href="https://nvio.pe/">
-              <img src="./assets/proyectos/nvio.pe.png">
-              <span class="card-title">Card Title</span>
-            </a>
+    <section id="proyectos" class="container">
+      <!-- <div class="row">
+    
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <a href="https://nvio.pe/">
+                  <img src="./assets/proyectos/nvio.pe.png">
+                  <span class="card-title">Card Title</span>
+                </a>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+    
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <a href="https://nvio.pe/">
+                  <img src="./assets/proyectos/dashboard.png">
+                  <span class="card-title">Card Title</span>
+                </a>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">This is a link</a>
+              </div>
+            </div>
           </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
+    
+        </div> -->
+    </section>
 
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-image">
-            <a href="https://nvio.pe/">
-              <img src="./assets/proyectos/dashboard.png">
-              <span class="card-title">Card Title</span>
-            </a>
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
-        </div>
-      </div>
+    <section id="contacto">
 
-    </div>
-  </section>
+    </section>
 
-  <section id="contacto">
+    <section id="proyectos" class="container">
+      <!-- <div class="row">
+      
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image">
+                  <a href="https://nvio.pe/">
+                    <img src="./assets/proyectos/nvio.pe.png">
+                    <span class="card-title">Card Title</span>
+                  </a>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image">
+                  <a href="https://nvio.pe/">
+                    <img src="./assets/proyectos/dashboard.png">
+                    <span class="card-title">Card Title</span>
+                  </a>
+                </div>
+                <div class="card-content">
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+      
+          </div> -->
+    </section>
 
-  </section>
+    <section id="contacto">
+
+    </section>
+  </main>
+
+
 
   <footer class="page-footer">
     <div class="container">
