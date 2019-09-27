@@ -1,21 +1,35 @@
 window.onload = () => {
 
   let navbar = document.querySelector('nav')
+  let linksInternos = document.querySelector('.menu ul')
+
+  // linksInternos.children[0].children[0].addEventListener('click', (e) => {
+  //   smoothScroll('#habilidades', 500, 150)
+  // })
+
+  // linksInternos.children[1].children[0].addEventListener('click', (e) => {
+  //   smoothScroll('#proyectos', 500, 0)
+  // })
+
+  // linksInternos.children[2].children[0].addEventListener('click', (e) => {
+  //   smoothScroll('#proyectos', 500, 0)
+  // })
 
   let scrollDownBtn = document.querySelector('#scrollDown')
 
   scrollDownBtn.addEventListener('click', (e) => {
-    smoothScroll('#habilidades', 500)
+    smoothScroll('#habilidades', 500, 150)
   })
 
 }
 
 
-const smoothScroll = (target, duration) => {
+const smoothScroll = (target, duration, offset) => {
   let targetElem = document.querySelector(target)
   let targetPosition = targetElem.getBoundingClientRect().top
   let startPosition = window.pageYOffset
-  let distance = targetPosition - startPosition - 150
+  console.log(`target pos: ${targetPosition}, start pos: ${startPosition}`)
+  let distance = targetPosition - startPosition - offset
   let startTime = null
   
   const ease = (t, b, c, d) => {
