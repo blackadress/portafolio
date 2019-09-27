@@ -13,6 +13,9 @@
 <body>
 
   <nav class="menu">
+    <!-- <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </span> -->
     <ul class="lista-habilidades">
       <li><a href="#habilidades" class="">Habilidades</a></li>
       <li><a href="#proyectos" class="">Proyectos</a></li>
@@ -26,14 +29,17 @@
     </ul>
   </nav>
 
+
   <main>
     <section id="inicial" class="container-fluid">
       <h1>Erland Huamán Borda</h1>
       <h2>Desarrollador de software</h2>
       <p class="descripcion">¡Hola! Soy un desarrollador de software, enfocado en la web. Experiencia tanto en
         Backend, Frontend y Servidor</p>
-      <div class="chevron chevron-abajo"></div>
-      <p class="scroll-down">desplázate hacia abajo</p>
+      <div id="scrollDown">
+        <div class="chevron chevron-abajo"></div>
+        <p class="scroll-down">desplázate hacia abajo</p>
+      </div>
     </section>
 
     <section id="habilidades" class="container">
@@ -195,6 +201,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="portafolio.js">
+  </script>
 
 </body>
 
