@@ -1,6 +1,5 @@
 window.onload = () => {
 
-  let navbar = document.querySelector('nav')
   let linksInternos = document.querySelector('.menu ul')
 
   linksInternos.children[0].children[0].addEventListener('click', (e) => {
@@ -21,8 +20,10 @@ window.onload = () => {
     smoothScroll('#habilidades', 500, 150)
   })
 
-}
+  // mobile open menu
+  navSlide()
 
+}
 
 const smoothScroll = (target, duration, offset) => {
   let targetElem = document.querySelector(target)
@@ -46,4 +47,16 @@ const smoothScroll = (target, duration, offset) => {
   }
 
   requestAnimationFrame(animation)
+}
+
+const navSlide = () => {
+  const burger = document.querySelector('.burger')
+  const nav = document.querySelector('.lista-habilidades')
+
+  burger.addEventListener('click', e => {
+    nav.classList.toggle('burger-active')
+    burger.classList.toggle('burger-toggle')
+  })
+
+  
 }
